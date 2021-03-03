@@ -20,8 +20,8 @@
 //
 // Usage:
 //  import(
-//   _ "github.com/astaxie/beego/config/yaml"
-//     "github.com/astaxie/beego/config"
+//   _ "github.com/Sonek-HoangBui/beego/config/yaml"
+//     "github.com/Sonek-HoangBui/beego/config"
 //  )
 //
 //  cnf, err := config.NewConfig("yaml", "config.yaml")
@@ -40,7 +40,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/astaxie/beego/config"
+	"github.com/Sonek-HoangBui/beego/config"
 	"github.com/beego/goyaml2"
 )
 
@@ -296,7 +296,7 @@ func (c *ConfigContainer) getData(key string) (interface{}, error) {
 			case map[string]interface{}:
 				{
 					tmpData = v.(map[string]interface{})
-					if idx == len(keys) - 1 {
+					if idx == len(keys)-1 {
 						return tmpData, nil
 					}
 				}

@@ -15,7 +15,7 @@
 // Package validation for validations
 //
 //	import (
-//		"github.com/astaxie/beego/validation"
+//		"github.com/Sonek-HoangBui/beego/validation"
 //		"log"
 //	)
 //
@@ -380,7 +380,6 @@ func (v *Validation) Valid(obj interface{}) (b bool, err error) {
 					currentField = objV.Field(i).Elem().Interface()
 				}
 			}
-
 
 			chk := Required{""}.IsSatisfied(currentField)
 			if !hasRequired && v.RequiredFirst && !chk {

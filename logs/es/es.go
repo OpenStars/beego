@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/OwnLocal/goes"
-	"github.com/astaxie/beego/logs"
+	"github.com/Sonek-HoangBui/beego/logs"
 )
 
 // NewES return a LoggerInterface
@@ -78,4 +78,3 @@ func (el *esLogger) Flush() {
 func init() {
 	logs.Register(logs.AdapterEs, NewES)
 }
-

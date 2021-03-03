@@ -27,11 +27,11 @@ import (
 	"sync"
 	"time"
 
-	beecontext "github.com/astaxie/beego/context"
-	"github.com/astaxie/beego/context/param"
-	"github.com/astaxie/beego/logs"
-	"github.com/astaxie/beego/toolbox"
-	"github.com/astaxie/beego/utils"
+	beecontext "github.com/Sonek-HoangBui/beego/context"
+	"github.com/Sonek-HoangBui/beego/context/param"
+	"github.com/Sonek-HoangBui/beego/logs"
+	"github.com/Sonek-HoangBui/beego/toolbox"
+	"github.com/Sonek-HoangBui/beego/utils"
 	"go.elastic.co/apm"
 )
 

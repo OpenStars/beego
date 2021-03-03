@@ -15,13 +15,14 @@
 package authz
 
 import (
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/context"
-	"github.com/astaxie/beego/plugins/auth"
-	"github.com/casbin/casbin"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/Sonek-HoangBui/beego"
+	"github.com/Sonek-HoangBui/beego/context"
+	"github.com/Sonek-HoangBui/beego/plugins/auth"
+	"github.com/casbin/casbin"
 )
 
 func testRequest(t *testing.T, handler *beego.ControllerRegister, user string, path string, method string, code int) {

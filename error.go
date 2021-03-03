@@ -23,12 +23,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/astaxie/beego/context"
-	"github.com/astaxie/beego/utils"
+	"github.com/Sonek-HoangBui/beego/context"
+	"github.com/Sonek-HoangBui/beego/utils"
 )
 
 const (
-	errorTypeHandler    = iota
+	errorTypeHandler = iota
 	errorTypeController
 )
 
