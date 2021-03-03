@@ -113,6 +113,7 @@ type LogConfig struct {
 	AccessLogsFormat string //access log format: JSON_FORMAT, APACHE_FORMAT or empty string
 	FileLineNum      bool
 	Outputs          map[string]string // Store Adaptor : config
+	EnableAPM        bool
 }
 
 var (

@@ -17,6 +17,7 @@ package beego
 import (
 	"errors"
 	"fmt"
+	"log"
 	"net/http"
 	"path"
 	"path/filepath"
@@ -31,6 +32,7 @@ import (
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/toolbox"
 	"github.com/astaxie/beego/utils"
+	"go.elastic.co/apm"
 )
 
 // default filter execution points
@@ -669,6 +671,15 @@ func (p *ControllerRegister) ServeHTTP(rw http.ResponseWriter, r *http.Request) 
 	)
 	context := p.pool.Get().(*beecontext.Context)
 	context.Reset(rw, r)
+
+	if BConfig.Log.EnableAPM {
+		log.Println(fmt.Sprintf("[%s] - %s", context.Request.Method, context.Request.URL.Path), "--- BEGIN ---")
+		span, _ := apm.StartSpan(context.Request.Context(), fmt.Sprintf("[%s] - %s", context.Request.Method, context.Request.URL.Path), "REQUEST")
+		defer func(span *apm.Span) {
+			span.End()
+			log.Println(fmt.Sprintf("[%s] - %s", context.Request.Method, context.Request.URL.Path), "--- END ---")
+		}(span)
+	}
 
 	defer p.pool.Put(context)
 	if BConfig.RecoverFunc != nil {
