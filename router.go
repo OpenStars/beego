@@ -17,7 +17,6 @@ package beego
 import (
 	"errors"
 	"fmt"
-	"log"
 	"net/http"
 	"path"
 	"path/filepath"
@@ -673,11 +672,9 @@ func (p *ControllerRegister) ServeHTTP(rw http.ResponseWriter, r *http.Request) 
 	context.Reset(rw, r)
 
 	if BConfig.Log.EnableAPM {
-		log.Println(fmt.Sprintf("[%s] - %s", context.Request.Method, context.Request.URL.Path), "--- BEGIN ---")
 		span, _ := apm.StartSpan(context.Request.Context(), fmt.Sprintf("[%s] - %s", context.Request.Method, context.Request.URL.Path), "REQUEST")
 		defer func(span *apm.Span) {
 			span.End()
-			log.Println(fmt.Sprintf("[%s] - %s", context.Request.Method, context.Request.URL.Path), "--- END ---")
 		}(span)
 	}
 
