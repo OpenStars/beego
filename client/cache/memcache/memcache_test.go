@@ -26,7 +26,7 @@ import (
 	_ "github.com/bradfitz/gomemcache/memcache"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/beego/beego/v2/client/cache"
+	"github.com/Sonek-HoangBui/beego/v2/client/cache"
 )
 
 func TestMemcacheCache(t *testing.T) {

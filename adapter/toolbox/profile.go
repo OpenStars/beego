@@ -19,7 +19,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/beego/beego/v2/core/admin"
+	"github.com/Sonek-HoangBui/beego/v2/core/admin"
 )
 
 var startTime = time.Now()

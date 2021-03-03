@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/beego/beego/v2/client/httplib"
+	"github.com/Sonek-HoangBui/beego/v2/client/httplib"
 	"github.com/stretchr/testify/assert"
 )
 

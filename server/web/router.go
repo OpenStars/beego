@@ -17,6 +17,7 @@ package web
 import (
 	"errors"
 	"fmt"
+	"log"
 	"net/http"
 	"path"
 	"reflect"
@@ -26,11 +27,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/beego/beego/v2/core/logs"
+	"github.com/Sonek-HoangBui/beego/v2/core/logs"
 
-	"github.com/beego/beego/v2/core/utils"
-	beecontext "github.com/beego/beego/v2/server/web/context"
-	"github.com/beego/beego/v2/server/web/context/param"
+	"github.com/Sonek-HoangBui/beego/v2/core/utils"
+	beecontext "github.com/Sonek-HoangBui/beego/v2/server/web/context"
+	"github.com/Sonek-HoangBui/beego/v2/server/web/context/param"
+	"go.elastic.co/apm"
 )
 
 // default filter execution points
@@ -942,7 +944,6 @@ func (p *ControllerRegister) execFilter(context *beecontext.Context, urlPath str
 
 // Implement http.Handler interface.
 func (p *ControllerRegister) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
-
 	ctx := p.GetContext()
 
 	ctx.Reset(rw, r)
@@ -968,6 +969,13 @@ func (p *ControllerRegister) serveHttp(ctx *beecontext.Context) {
 		originRouterInfo *ControllerInfo
 		originFindRouter bool
 	)
+
+	log.Println(fmt.Sprintf("[%s] - %s", ctx.Request.Method, ctx.Request.URL.Path), "--- BEGIN ---")
+	span, _ := apm.StartSpan(ctx.Request.Context(), fmt.Sprintf("[%s] - %s", ctx.Request.Method, ctx.Request.URL.Path), "REQUEST")
+	defer func(span *apm.Span) {
+		span.End()
+		log.Println(fmt.Sprintf("[%s] - %s", ctx.Request.Method, ctx.Request.URL.Path), "--- END ---")
+	}(span)
 
 	if p.cfg.RecoverFunc != nil {
 		defer p.cfg.RecoverFunc(ctx, p.cfg)

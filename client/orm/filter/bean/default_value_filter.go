@@ -19,10 +19,10 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/beego/beego/v2/core/logs"
+	"github.com/Sonek-HoangBui/beego/v2/core/logs"
 
-	"github.com/beego/beego/v2/client/orm"
-	"github.com/beego/beego/v2/core/bean"
+	"github.com/Sonek-HoangBui/beego/v2/client/orm"
+	"github.com/Sonek-HoangBui/beego/v2/core/bean"
 )
 
 // DefaultValueFilterChainBuilder only works for InsertXXX method,

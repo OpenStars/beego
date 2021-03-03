@@ -19,9 +19,9 @@
 // package controllers
 //
 // import (
-// 	"github.com/beego/beego/v2"
-// 	"github.com/beego/beego/v2/client/cache"
-// 	"github.com/beego/beego/v2/server/web/captcha"
+// 	"github.com/Sonek-HoangBui/beego/v2"
+// 	"github.com/Sonek-HoangBui/beego/v2/client/cache"
+// 	"github.com/Sonek-HoangBui/beego/v2/server/web/captcha"
 // )
 //
 // var cpt *captcha.Captcha
@@ -67,11 +67,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/beego/beego/v2/core/logs"
+	"github.com/Sonek-HoangBui/beego/v2/core/logs"
 
-	"github.com/beego/beego/v2/core/utils"
-	"github.com/beego/beego/v2/server/web"
-	"github.com/beego/beego/v2/server/web/context"
+	"github.com/Sonek-HoangBui/beego/v2/core/utils"
+	"github.com/Sonek-HoangBui/beego/v2/server/web"
+	"github.com/Sonek-HoangBui/beego/v2/server/web/context"
 )
 
 var (

@@ -1,4 +1,4 @@
-# Beego [![Build Status](https://travis-ci.org/beego/beego.svg?branch=master)](https://travis-ci.org/beego/beego) [![GoDoc](http://godoc.org/github.com/beego/beego?status.svg)](http://godoc.org/github.com/beego/beego) [![Foundation](https://img.shields.io/badge/Golang-Foundation-green.svg)](http://golangfoundation.org) [![Go Report Card](https://goreportcard.com/badge/github.com/beego/beego)](https://goreportcard.com/report/github.com/beego/beego)
+# Beego [![Build Status](https://travis-ci.org/beego/beego.svg?branch=master)](https://travis-ci.org/beego/beego) [![GoDoc](http://godoc.org/github.com/Sonek-HoangBui/beego?status.svg)](http://godoc.org/github.com/Sonek-HoangBui/beego) [![Foundation](https://img.shields.io/badge/Golang-Foundation-green.svg)](http://golangfoundation.org) [![Go Report Card](https://goreportcard.com/badge/github.com/Sonek-HoangBui/beego)](https://goreportcard.com/report/github.com/Sonek-HoangBui/beego)
 
 Beego is used for rapid development of enterprise application in Go, including RESTful APIs, web apps and backend
 services.
@@ -21,7 +21,7 @@ Beego is compos of four parts:
 
 [Official website](http://beego.me)
 
-[Example](https://github.com/beego/beego-example)
+[Example](https://github.com/Sonek-HoangBui/beego-example)
 
 > If you could not open official website, go to [beedoc](https://github.com/beego/beedoc)
 
@@ -40,14 +40,14 @@ Beego is compos of four parts:
 
 #### Download and install
 
-    go get github.com/beego/beego/v2@v2.0.0
+    go get github.com/Sonek-HoangBui/beego/v2@v2.0.0
 
 #### Create file `hello.go`
 
 ```go
 package main
 
-import "github.com/beego/beego/v2/server/web"
+import "github.com/Sonek-HoangBui/beego/v2/server/web"
 
 func main() {
 	web.Run()

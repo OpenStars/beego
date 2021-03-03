@@ -1,5 +1,5 @@
-//module github.com/beego/beego/v2
-module github.com/beego/beego/v2
+//module github.com/Sonek-HoangBui/beego/v2
+module github.com/Sonek-HoangBui/beego/v2
 
 require (
 	github.com/Knetic/govaluate v3.0.0+incompatible // indirect
@@ -25,6 +25,7 @@ require (
 	github.com/golang/snappy v0.0.0-20180518054509-2e65f85255db // indirect
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/google/go-cmp v0.5.0 // indirect
+	go.elastic.co/apm v1.11.0
 	github.com/google/uuid v1.1.1
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/hashicorp/golang-lru v0.5.4

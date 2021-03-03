@@ -20,8 +20,8 @@
 //
 // Usage:
 //  import(
-//    _ "github.com/beego/beego/v2/core/config/xml"
-//      "github.com/beego/beego/v2/core/config"
+//    _ "github.com/Sonek-HoangBui/beego/v2/core/config/xml"
+//      "github.com/Sonek-HoangBui/beego/v2/core/config"
 //  )
 //
 //  cnf, err := config.NewConfig("xml", "config.xml")
@@ -41,8 +41,8 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/beego/beego/v2/core/config"
-	"github.com/beego/beego/v2/core/logs"
+	"github.com/Sonek-HoangBui/beego/v2/core/config"
+	"github.com/Sonek-HoangBui/beego/v2/core/logs"
 
 	"github.com/beego/x2j"
 )

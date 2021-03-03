@@ -3,7 +3,7 @@ package cache
 import (
 	"math"
 
-	"github.com/beego/beego/v2/core/berror"
+	"github.com/Sonek-HoangBui/beego/v2/core/berror"
 )
 
 var (

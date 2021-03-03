@@ -21,9 +21,9 @@ import (
 
 	"github.com/casbin/casbin"
 
-	beego "github.com/beego/beego/v2/adapter"
-	"github.com/beego/beego/v2/adapter/context"
-	"github.com/beego/beego/v2/adapter/plugins/auth"
+	beego "github.com/Sonek-HoangBui/beego/v2/adapter"
+	"github.com/Sonek-HoangBui/beego/v2/adapter/context"
+	"github.com/Sonek-HoangBui/beego/v2/adapter/plugins/auth"
 )
 
 const (
