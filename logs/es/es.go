@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"time"
 
+	"github.com/OpenStars/beego/logs"
 	"github.com/OwnLocal/goes"
-	"github.com/Sonek-HoangBui/beego/logs"
 )
 
 // NewES return a LoggerInterface

@@ -26,11 +26,11 @@ import (
 	"sync"
 	"time"
 
-	beecontext "github.com/Sonek-HoangBui/beego/context"
-	"github.com/Sonek-HoangBui/beego/context/param"
-	"github.com/Sonek-HoangBui/beego/logs"
-	"github.com/Sonek-HoangBui/beego/toolbox"
-	"github.com/Sonek-HoangBui/beego/utils"
+	beecontext "github.com/OpenStars/beego/context"
+	"github.com/OpenStars/beego/context/param"
+	"github.com/OpenStars/beego/logs"
+	"github.com/OpenStars/beego/toolbox"
+	"github.com/OpenStars/beego/utils"
 	"go.elastic.co/apm"
 )
 

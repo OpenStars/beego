@@ -15,8 +15,8 @@
 // Package cors provides handlers to enable CORS support.
 // Usage
 //	import (
-// 		"github.com/Sonek-HoangBui/beego"
-//		"github.com/Sonek-HoangBui/beego/plugins/cors"
+// 		"github.com/OpenStars/beego"
+//		"github.com/OpenStars/beego/plugins/cors"
 // )
 //
 //	func main() {
@@ -42,8 +42,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Sonek-HoangBui/beego"
-	"github.com/Sonek-HoangBui/beego/context"
+	"github.com/OpenStars/beego"
+	"github.com/OpenStars/beego/context"
 )
 
 const (

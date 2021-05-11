@@ -21,7 +21,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Sonek-HoangBui/beego/testdata"
+	"github.com/OpenStars/beego/testdata"
 )
 
 var header = `{{define "header"}}

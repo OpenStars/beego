@@ -19,9 +19,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/Sonek-HoangBui/beego"
-	"github.com/Sonek-HoangBui/beego/context"
-	"github.com/Sonek-HoangBui/beego/plugins/auth"
+	"github.com/OpenStars/beego"
+	"github.com/OpenStars/beego/context"
+	"github.com/OpenStars/beego/plugins/auth"
 	"github.com/casbin/casbin"
 )
 

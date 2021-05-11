@@ -15,7 +15,7 @@
 // Package validation for validations
 //
 //	import (
-//		"github.com/Sonek-HoangBui/beego/validation"
+//		"github.com/OpenStars/beego/validation"
 //		"log"
 //	)
 //

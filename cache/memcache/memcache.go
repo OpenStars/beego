@@ -20,8 +20,8 @@
 //
 // Usage:
 // import(
-//   _ "github.com/Sonek-HoangBui/beego/cache/memcache"
-//   "github.com/Sonek-HoangBui/beego/cache"
+//   _ "github.com/OpenStars/beego/cache/memcache"
+//   "github.com/OpenStars/beego/cache"
 // )
 //
 //  bm, err := cache.NewCache("memcache", `{"conn":"127.0.0.1:11211"}`)
@@ -35,7 +35,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Sonek-HoangBui/beego/cache"
+	"github.com/OpenStars/beego/cache"
 	"github.com/bradfitz/gomemcache/memcache"
 )
 
