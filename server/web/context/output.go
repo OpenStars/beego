@@ -38,6 +38,7 @@ import (
 type BeegoOutput struct {
 	Context    *Context
 	Status     int
+	Data       []byte
 	EnableGzip bool
 }
 
@@ -201,6 +202,7 @@ func (output *BeegoOutput) JSON(data interface{}, hasIndent bool, encoding bool)
 	if encoding {
 		content = []byte(stringsToJSON(string(content)))
 	}
+	output.Data = content
 	return output.Body(content)
 }
 
