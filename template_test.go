@@ -21,8 +21,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/astaxie/beego/testdata"
-	"github.com/elazarl/go-bindata-assetfs"
+	"github.com/OpenStars/beego/testdata"
+	assetfs "github.com/elazarl/go-bindata-assetfs"
 )
 
 var header = `{{define "header"}}
