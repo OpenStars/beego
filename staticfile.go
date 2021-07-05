@@ -26,9 +26,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/astaxie/beego/context"
-	"github.com/astaxie/beego/logs"
-	"github.com/hashicorp/golang-lru"
+	"github.com/OpenStars/beego/context"
+	"github.com/OpenStars/beego/logs"
+	lru "github.com/hashicorp/golang-lru"
 )
 
 var errNotStaticRequest = errors.New("request not a static file request")

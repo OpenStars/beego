@@ -86,9 +86,9 @@ CURRENT_BRANCH=${CURRENT_BRANCH:2}
 
 BUILD_TIME=$(date +%Y-%m-%d--%T)
 
-LD_EXTRAFLAGS="${LD_EXTRAFLAGS} -X github.com/astaxie/beego.GoVersion=${go_version[2]:2}"
-LD_EXTRAFLAGS="${LD_EXTRAFLAGS} -X github.com/astaxie/beego.GitBranch=${CURRENT_BRANCH}"
-LD_EXTRAFLAGS="${LD_EXTRAFLAGS} -X github.com/astaxie/beego.BuildTime=$BUILD_TIME"
+LD_EXTRAFLAGS="${LD_EXTRAFLAGS} -X github.com/OpenStars/beego.GoVersion=${go_version[2]:2}"
+LD_EXTRAFLAGS="${LD_EXTRAFLAGS} -X github.com/OpenStars/beego.GitBranch=${CURRENT_BRANCH}"
+LD_EXTRAFLAGS="${LD_EXTRAFLAGS} -X github.com/OpenStars/beego.BuildTime=$BUILD_TIME"
 
 OPTIMIZATION_FLAGS="-trimpath"
 if [ "${DEBUG}" == "1" ]; then
