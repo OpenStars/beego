@@ -181,6 +181,13 @@ func searchFile(ctx *context.Context) (string, os.FileInfo, error) {
 		if prefix != "/" && len(requestPath) > len(prefix) && requestPath[len(prefix)] != '/' {
 			continue
 		}
+
+		if strings.HasSuffix(prefix, "**") && strings.Contains(requestPath, prefix[:len(prefix)-2]) {
+			if fi, err := os.Stat(staticDir); fi != nil {
+				return staticDir, fi, err
+			}
+		}
+
 		filePath := path.Join(staticDir, requestPath[len(prefix):])
 		if fi, err := os.Stat(filePath); fi != nil {
 			return filePath, fi, err
