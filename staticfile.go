@@ -175,14 +175,14 @@ func searchFile(ctx *context.Context) (string, os.FileInfo, error) {
 	}
 
 	for prefix, staticDir := range BConfig.WebConfig.StaticDir {
-		if !strings.Contains(requestPath, prefix) {
+		if !strings.Contains(requestPath, prefix) && (len(prefix) < 2 || (len(prefix) >= 2) && !strings.Contains(requestPath, prefix[:len(prefix)-2])) {
 			continue
 		}
 		if prefix != "/" && len(requestPath) > len(prefix) && requestPath[len(prefix)] != '/' {
 			continue
 		}
 
-		if strings.HasSuffix(prefix, "**") && strings.Contains(requestPath, prefix[:len(prefix)-2]) {
+		if strings.HasSuffix(prefix, "**") && (len(prefix) < 2 || (len(prefix) >= 2) && !strings.Contains(requestPath, prefix[:len(prefix)-2])) {
 			if fi, err := os.Stat(staticDir); fi != nil {
 				return staticDir, fi, err
 			}
