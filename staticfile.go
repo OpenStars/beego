@@ -178,7 +178,7 @@ func searchFile(ctx *context.Context) (string, os.FileInfo, error) {
 		if !strings.Contains(requestPath, prefix) && (len(prefix) < 2 || (len(prefix) >= 2) && !strings.Contains(requestPath, prefix[:len(prefix)-2])) {
 			continue
 		}
-		if prefix != "/" && len(requestPath) > len(prefix) && requestPath[len(prefix)] != '/' {
+		if prefix != "/" && len(requestPath) > len(prefix) && requestPath[len(prefix)] != '/' && !strings.HasSuffix(prefix, "**") {
 			continue
 		}
 
